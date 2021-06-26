@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>ウイルスが発見されました。今すぐ除去してください。</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- BootstrapのCSS読み込み -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- jQuery読み込み -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- BootstrapのJS読み込み -->
+        <script src="js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" conten="width:device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="web-style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+        <style id="font-input">
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&family=Noto+Serif+JP:wght@300&display=swap');
+        </style>
+    </head>
+    <body class="bg-danger">
+        <div class="container">
+        <h1>ウイルスが発見されました。</h1>
+        <h2>あなたのデバイス内に有害なウイルスが発見されました。<br>このウイルスを<span id="timer" style="font-size: 2em;"></span>秒以内に除去しなければ、<strong>デバイスが爆発する恐れ</strong>があります。</h2>
+        <h4>あなたのデバイスは悪意のある<strong>ウイルスに侵食</strong>されています。今すぐに<strong>当社のウイルス削除アプリ</strong>を使ってウイルスを削除しないと、<strong>デバイスが爆発</strong>してしまう<span class="text-warning">危険</span>があります。安全のために、<span class="str">すぐに</span><strong>「ウイルスを削除」</strong>ボタンを押して当社のウイルス削除アプリを使用してください。<strong>時間の猶予はあと少し</strong>です。さあ、「ウイルスを削除」ボタンを今すぐ押しましょう。</h4>
+        <a href="hahaha.html" class="btn btn-laege">ウイルスを削除</a>
+    </div>
+        <script>
+            $(function(){
+            // ブラウザバック禁止
+            history.pushState(null, null, null);
+            $(window).on("popstate", function(e){
+            if (!e.originalEvent.state){
+                play_se();
+                history.pushState(null, null, null);
+                return;
+            }
+            });
+            var time = 300;
+            setInterval(function(){
+                time--;
+                $('#timer').text(time);
+            }, 1000);
+        });
+        </script>
+    </body>
+</html>
